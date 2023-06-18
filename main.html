@@ -1,16 +1,37 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <title>Star CSS</title>
+  <style>
+    .star {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      color: yellow;
+      position: relative;
+      transform: rotate(-45deg);
+    }
+
+    .star:before, .star:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0.35rem;
+      width: 0.4rem;
+      height: 2rem;
+      background-color: inherit;
+    }
+
+    .star:before {
+      transform: rotate(-45deg) skewX(35.26deg);
+    }
+
+    .star:after {
+      transform: rotate(45deg) skewX(35.26deg);
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+  <div class="star"></div>
 </body>
-
 </html>
